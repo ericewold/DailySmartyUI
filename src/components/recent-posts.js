@@ -10,7 +10,9 @@ class RecentPosts extends Component {
 
   renderPosts = function () {
     const posts = this.props.recentPosts.map((post, index) => {
-      return <li key={index}>{post.title}</li>;
+      if (index < 3) {
+        return <li key={index}>{post.title}</li>;
+      }
     });
     return posts;
   };
