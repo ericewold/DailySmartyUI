@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 
 export default class Logo extends Component {
-  render() {
+  render(props) {
+    const size = {
+      height: this.props.size ? this.props.size : 105
+    };
     return (
       <div className="logo-main">
-        <img src="/assets/ds_circle_logo.png" />
+        <img style={size} src="/assets/ds_circle_logo.png" />
       </div>
     );
   }

@@ -6,7 +6,7 @@ class Results extends Component {
     return (
       <div>
         <h1>results</h1>
-        <Logo />
+        <Logo size={55} />
       </div>
     );
   }
