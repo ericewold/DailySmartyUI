@@ -1,19 +1,36 @@
-import { SET_RECENT_POSTS } from "./types";
-import axios from "axios";
+import { SET_RECENT_POSTS } from './types';
+import axios from 'axios';
 
 export function fetchRecentPosts() {
   return function (dispatch) {
     axios
       .get(`https://api.dailysmarty.com/posts`)
       .then(response => {
-        console.log("response from get", response.data.posts);
+        console.log('posts', response.data.posts);
         dispatch({
           type: SET_RECENT_POSTS,
           payload: response.data.posts
         });
       })
       .catch(error => {
-        console.log("error in ", error);
+        console.log('error in ', error);
+      });
+  };
+}
+
+export function fetchPostsWithQuery(query) {
+  return function (dispatch) {
+    axios
+      .get(`https://api.dailysmarty.com/search?q=${query}`)
+      .then(response => {
+        console.log('query posts', response.data.posts);
+        // dispatch({
+        //   type: SET_RECENT_POSTS,
+        //   payload: response.data.posts
+        // });
+      })
+      .catch(error => {
+        console.log('error in ', error);
       });
   };
 }
