@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+
+import { Link } from 'react-router-dom';
 
 export default class Logo extends Component {
   render(props) {
@@ -6,8 +8,10 @@ export default class Logo extends Component {
       height: this.props.size ? this.props.size : 105
     };
     return (
-      <div className="logo-main">
-        <img style={size} src="/assets/ds_circle_logo.png" />
+      <div className='logo-main'>
+        <Link to='/'>
+          <img style={size} src='/assets/ds_circle_logo.png' />
+        </Link>
       </div>
     );
   }
