@@ -1,0 +1,24 @@
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+}
+.app-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.post-topic {
+  margin-right: 20px;
+  color: $color-gray-one;
+}

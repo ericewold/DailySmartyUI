@@ -1,0 +1,17 @@
+.recent-posts-container {
+  @include post-container();
+
+  .recent-posts-heading {
+    color: $color-blue-one;
+  }
+
+  .recent-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    grid-gap: 42px;
+    .recent-post {
+      margin-top: 20px;
+    }
+  }
+}

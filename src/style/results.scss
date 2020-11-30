@@ -1,0 +1,22 @@
+.results-posts-container {
+  @include post-container();
+
+  .result-post {
+    margin-top: 20px;
+
+    .result-post-title a {
+      color: $color-blue-one !important;
+    }
+
+    .result-post-links {
+      height: 0px;
+      display: none;
+    }
+    &:hover {
+      .result-post-links {
+        height: 70px;
+        display: block;
+      }
+    }
+  }
+}

@@ -14,7 +14,7 @@ class Results extends Component {
 
   render() {
     return (
-      <div className='home'>
+      <div className='app-container'>
         <Logo size={55} />
         <SearchBar onSubmit={query => this.handleSearchBarSubmit(query)} />
         <ResultsPosts />
