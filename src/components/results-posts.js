@@ -12,9 +12,9 @@ class ResultsPosts extends Component {
 
   render() {
     return (
-      <div className='results-posts'>
+      <div className='results-posts-container'>
         <div className='results-posts-wrapper'>
-          <ul className='results-posts-post'>{this.renderPosts()}</ul>
+          <ul className='results-posts'>{this.renderPosts()}</ul>
         </div>
       </div>
     );

@@ -1,3 +1,116 @@
-.post-topic {
-  margin: 0 4px;
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0px;
+}
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .logo-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+
+    img {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    p {
+      color: #aaa;
+      align-self: flex-end;
+    }
+
+    input {
+      font-size: 1.5em;
+      padding-left: 20px;
+      width: 50vw;
+      height: 50px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.3);
+
+      &::placeholder {
+        color: #b3b3b3;
+        font-family: 'Font Awesome\ 5 Free', 'Lato', Arial, Helvetica,
+          sans-serif;
+        font-weight: 600;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .post-topic {
+    margin-right: 20px;
+    color: #b3b3b3;
+  }
+  .recent-posts-container {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+
+    .recent-posts-heading {
+      color: #0079ff;
+    }
+
+    .recent-posts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-content: space-between;
+      grid-gap: 42px;
+      .recent-post {
+        margin-top: 20px;
+      }
+    }
+  }
+  .results-posts-container {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+
+    .result-post {
+      margin-top: 20px;
+
+      .result-post-title a {
+        color: #0079ff !important;
+      }
+
+      .result-post-links {
+        height: 0px;
+        display: none;
+      }
+      &:hover {
+        .result-post-links {
+          height: 70px;
+          display: block;
+        }
+      }
+    }
+  }
 }
