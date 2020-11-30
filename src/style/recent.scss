@@ -12,6 +12,9 @@
     grid-gap: 42px;
     .recent-post {
       margin-top: 20px;
+      .recent-post-title {
+        margin-bottom: 10px;
+      }
     }
   }
 }

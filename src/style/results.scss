@@ -9,8 +9,14 @@
     }
 
     .result-post-links {
-      height: 0px;
-      display: none;
+      margin-top: 10px;
+      height: 70px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+      a {
+        color: $color-gray-one;
+      }
     }
     &:hover {
       .result-post-links {
