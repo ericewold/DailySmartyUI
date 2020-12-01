@@ -1,27 +1,29 @@
 .results-posts-container {
   @include post-container();
+  .results-posts-wrapper {
+    width: 100%;
+    .result-post {
+      margin-top: 20px;
 
-  .result-post {
-    margin-top: 20px;
-
-    .result-post-title a {
-      color: $color-blue-one !important;
-    }
-
-    .result-post-links {
-      margin-top: 10px;
-      height: 70px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-      a {
-        color: $color-gray-one;
+      .result-post-title a {
+        color: $color-blue-one !important;
       }
-    }
-    &:hover {
+
       .result-post-links {
-        height: 70px;
-        display: block;
+        margin-top: 10px;
+        display: none;
+
+        a {
+          color: $color-gray-one;
+        }
+      }
+      &:hover {
+        .result-post-links {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-gap: 21px;
+          text-transform: capitalize;
+        }
       }
     }
   }

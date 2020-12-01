@@ -15,15 +15,25 @@ class Post extends Component {
     return topics;
   }
 
+  formatString(link) {
+    //strip trailing / from link text
+    const working = link.charAt(link.length - 1)
+      ? link.substring(0, link.length - 1)
+      : link;
+    const lastIndex = working.lastIndexOf('/');
+    const result = working.substring(lastIndex + 1, working.length);
+
+    return result.replaceAll('-', ' ');
+  }
+
   renderLinks() {
     let links = this.props.post_links.map((post_link, index) => {
       return (
-        <span className='post-link' key={index}>
-          <div className='post-link-box'></div>
-          <div className='post-link-link'>
-            <a href={post_link.link_url}>Useful Link #{index + 1}</a>
-          </div>
-        </span>
+        <div className='post-link-link'>
+          <a href={post_link.link_url}>
+            {this.formatString(post_link.link_url)}
+          </a>
+        </div>
       );
     });
     return links;
